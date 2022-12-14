@@ -1,0 +1,50 @@
+from PicoAutonomousRobotics import KitronikPicoRobotBuggy
+from time import sleep
+
+buggy = KitronikPicoRobotBuggy()
+
+c2 = 65
+d2 = 73
+e2 = 82
+f2 = 87
+g2 = 98
+a2 = 110
+b2 = 123
+c3 = 131
+d3 = 147
+e3 = 165
+f3 = 175
+g3 = 196
+a3 = 220
+b3 = 247
+c4 = 262
+d4 = 294
+e4 = 330
+f4 = 349
+g4 = 392
+a4 = 440
+b4 = 494
+r = 10
+
+jingleBells = [e3,r,e3,r,e3,e3,e3,r,e3,r,e3,r,e3,e3,e3,r,g3,r,c3,r,d3,r,e3,e3,e3,r,f3,r,f3,r,f3,r,f3,r,f3,r,e3,r,e3,r,e3,r,e3,r,e3,r,d3,r,d3,r,e3,r,d3,r,g3,r]
+merryChristmas = [b3,r,e4,r,e4,r,f4,r,e4,r,d4,r,c4,r,c4,r,f4,r,f4,r,g4,r,f4,r,e4,r,f3,r,b3,r,b3,r,g4,r,g4,r,a4,r,g4,r,f4,r,e4,r,c4,r,b3,r,b3,r,c4,r,f4,r,d4,r,e4,r]
+merryChristmas2 = [g2,r,c3,r,c3,r,d3,r,c3,r,b2,r,a2,r,a2,r,d3,r,d3,r,e3,r,d3,r,c3,r,b2,r,g2,r,g2,r,e3,r,e3,r,f3,r,e3,r,d3,r,c3,r,a2,r,g2,r,g2,r,a2,r,d3,r,b2,r,c2,r]
+merryshort = [g2,r,c3,r,c3,r,d3,r,c3,r,b2,r,a2]
+
+def makeNoise(frequency):
+    print(frequency)
+    buggy.soundFrequency(frequency)
+    sleep(0.15)
+    buggy.silence()
+
+        
+def sing(music):
+    for note in music:
+        makeNoise(note)
+
+sleep(2)
+sing(jingleBells)
+buggy.silence()
+sleep(2)
+sing(merryChristmas)
+buggy.silence()
