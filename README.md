@@ -1,5 +1,19 @@
 # robot_day
 
-BUTTON
-The buggy has a button on the main board, with some built in functions:
-buggy.button.value()
+BUILT-IN FUNCTIONS
+
+Import package:
+    from PicoAutonomousRobotics import KitronikPicoRobotBuggy
+
+Creating instance of buggy:
+    buggy = KitronikPicoRobotBuggy()
+
+Button:
+    buggy.button.value()
+
+Buzzer:
+    buggy.beepHorn()
+    
+Lights:
+(LEDs are numbered 0 to 3, colours can be changed)
+    buggy.setLED(LED_number, buggy.LED_colour)
