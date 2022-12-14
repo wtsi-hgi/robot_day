@@ -29,13 +29,22 @@ r = 10
 jingleBells = [e3,r,e3,r,e3,e3,e3,r,e3,r,e3,r,e3,e3,e3,r,g3,r,c3,r,d3,r,e3,e3,e3,r,f3,r,f3,r,f3,r,f3,r,f3,r,e3,r,e3,r,e3,r,e3,r,e3,r,d3,r,d3,r,e3,r,d3,r,g3,r]
 merryChristmas = [g3,r,c4,r,c4,r,d4,r,c4,r,b3,r,a3,r,a3,r,d4,r,d4,r,e4,r,d4,r,c4,r,b3,r,g3,r,g3,r,e4,r,e4,r,f4,r,e4,r,d4,r,c4,r,a3,r,g3,r,g3,r,a3,r,d4,r,b3,r,c4,r]
 merryChristmas2 = [g2,r,c3,r,c3,r,d3,r,c3,r,b2,r,a2,r,a2,r,d3,r,d3,r,e3,r,d3,r,c3,r,b2,r,g2,r,g2,r,e3,r,e3,r,f3,r,e3,r,d3,r,c3,r,a2,r,g2,r,g2,r,a2,r,d3,r,b2,r,c3,r]
+merryshort = [g2,r,c3,r,c3,r,d3,r,c3,r,b2,r,a2]
+
 def makeNoise(frequency):
     print(frequency)
     buggy.soundFrequency(frequency)
     sleep(0.15)
+    buggy.silence()
 
+        
 def sing(music):
     for note in music:
         makeNoise(note)
 
+sleep(5)
+sing(jingleBells)
+buggy.silence()
+sleep(3)
 sing(merryChristmas2)
+buggy.silence()
